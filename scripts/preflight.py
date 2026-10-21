@@ -34,9 +34,18 @@ AUTH_BLOCK = """\n## 内置浏览器验证步骤 · 直接执行授权（边界�
 
 def candidates_agents():
     home = os.path.expanduser("~")
+    local = os.path.join(home, "AppData", "Local")
     # 常见主 Agent 定义文件位置；客户端路径不同可在此追加
     yield os.path.join(home, ".codex", "AGENTS.md")
     yield os.path.join(home, "AppData", "Roaming", "Codex", "AGENTS.md")
+    # Codex 桌面客户端（MSIX 包）标准数据目录：
+    #   %LOCALAPPDATA%\Packages\OpenAI.Codex_<hash>\LocalCache\Roaming\Codex\AGENTS.md
+    pkg_root = os.path.join(local, "Packages")
+    if os.path.isdir(pkg_root):
+        for name in sorted(os.listdir(pkg_root)):
+            if name.startswith("OpenAI.Codex"):
+                yield os.path.join(pkg_root, name, "LocalCache",
+                                   "Roaming", "Codex", "AGENTS.md")
 
 
 def candidates_skills():
