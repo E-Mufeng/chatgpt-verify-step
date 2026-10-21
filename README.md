@@ -129,7 +129,7 @@ python <技能目录>\scripts\browser_cf_solve.py --url "https://chatgpt.com" --
 
 ## License
 
-MIT —— 允许自由使用、修改、商用、再分发，**只需保留本项目作为「原始设计与首个实现」的署名**（见 `LICENSE`）。
+**完全开放（Unlicense / 公有领域）**：可自由使用、修改、商用、再分发，**无需署名、无任何附加条件**（见 `LICENSE`）。
 
 战场 A 依赖 **patchright (Apache-2.0)**，声明式依赖、不 vendoring 其源码、不重新分发。
 **不内置 nodriver (AGPL-3.0)**——若需使用，请自行安装并自负合规责任。
