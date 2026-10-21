@@ -1,0 +1,3 @@
+# 战场 A（独立 / 普通浏览器）依赖：patchright 伪装指纹过 CF。
+# 许可证 Apache-2.0（宽松，可声明式依赖分发）。不内置 nodriver（AGPL-3.0，分发有传染性）。
+patchright>=1.0

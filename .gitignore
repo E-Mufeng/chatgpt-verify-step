@@ -1,0 +1,16 @@
+# Python 本地隔离环境（由 bootstrap_venv.py 生成，不入库）
+venv/
+env/
+
+# 离线 wheels 缓存（体积大，按需自行下载）
+_wheels/
+
+# 字节码缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 操作系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp

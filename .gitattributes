@@ -1,0 +1,2 @@
+# 保证含中文的 .ps1 以 UTF-8 with BOM 入库（PowerShell 5.1 按 BOM 判断编码）
+*.ps1 text eol=crlf
